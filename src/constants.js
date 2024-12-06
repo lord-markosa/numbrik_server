@@ -1,0 +1,1 @@
+export const QUESTIONS_LIMIT_PER_REQUEST = 10;

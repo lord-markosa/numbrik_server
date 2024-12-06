@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1733395379228-116522",
+      "username": "testuser",
+      "password": "$2a$10$GNpUrfZy5kg99BX1XOTGRuHLOs2sXVOr6K1h7SefT4.zASmTMhh3C",
+      "phoneNumber": "9999999991",
+      "email": "testuser@gamil.com",
+      "topicwiseProgressInfo": {}
+    }
+  ],
+  "questions": [
+    {
+      "id": "1733397392332-735713",
+      "tags": [
+        "testing",
+        "sample"
+      ],
+      "lod": 0,
+      "problemStatement": "2 + 2 = ?",
+      "options": [
+        {
+          "value": "3",
+          "isCorrect": false
+        },
+        {
+          "value": "4",
+          "isCorrect": true
+        },
+        {
+          "value": "5",
+          "isCorrect": false
+        },
+        {
+          "value": "6",
+          "isCorrect": false
+        }
+      ],
+      "hint": "think hard",
+      "solution": "",
+      "answer": "",
+      "createdAt": "2024-12-05T11:16:27.614Z",
+      "createdBy": "1733395379228-116522"
+    }
+  ]
+}
