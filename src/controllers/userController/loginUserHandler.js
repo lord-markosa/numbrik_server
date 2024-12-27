@@ -1,5 +1,7 @@
 import bcrypt from "bcryptjs";
 import { getUserByUsername } from "../../models/userDao.js";
+import generateToken from "../../utils/generateToken.js";
+import generateAdminToken from "../../utils/generateAdminToken.js";
 
 const loginUserHandler = async (req, res) => {
     const { username, password } = req.body;
@@ -17,11 +19,17 @@ const loginUserHandler = async (req, res) => {
             return res.status(404).json({ message: "Invalid password" });
         }
 
+        const token = generateToken(user.id);
+
         // Send response with existing token, success message, storyList, and chats
         res.json({
             message: "Login successful",
-            token: user.token,
+            token: token,
             username,
+            diamonds: user.diamonds,
+            progressInfo: user.progressInfo,
+            adminToken:
+                user.role === "admin" ? generateAdminToken(user.id) : undefined,
         });
     } catch (error) {
         console.error(`Error logging in user: ${error}`);

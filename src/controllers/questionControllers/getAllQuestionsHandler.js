@@ -1,12 +1,14 @@
-import { getAllQuestion } from "../../models/questionDao.js";
+// [DISABLED]
 
-const getAllQuestionsHandler = async (_, res) => {
-    try {
-        const questions = await getAllQuestion();
-        res.status(200).json(questions);
-    } catch (error) {
-        res.status(500).json({ message: "Error fetching Question", error });
-    }
-};
+// import { getAllQuestion } from "../../models/questionDao.js";
 
-export default getAllQuestionsHandler;
+// const getAllQuestionsHandler = async (_, res) => {
+//     try {
+//         const questions = await getAllQuestion();
+//         res.status(200).json(questions);
+//     } catch (error) {
+//         res.status(500).json({ message: "Error fetching Question", error });
+//     }
+// };
+
+// export default getAllQuestionsHandler;

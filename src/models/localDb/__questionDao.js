@@ -1,4 +1,3 @@
-import { QUESTIONS_LIMIT_PER_REQUEST } from "../../constants.js";
 import generateUniqueId from "../../utils/generateUniqueId.js";
 import { readData, writeData } from "./localDataHandler.js";
 
@@ -7,10 +6,10 @@ export const __getAllQuestions = async () => (await readData()).questions;
 export const __getQuestionById = async (qId) =>
     (await __getAllQuestions()).find((question) => question.id === qId);
 
-export const __getQuestions = async (topic, currentCount) =>
+export const __getQuestions = async (topicId, startIdx, limit) =>
     (await __getAllQuestions())
-        .filter((question) => question.topic === topic)
-        .slice(currentCount, currentCount + QUESTIONS_LIMIT_PER_REQUEST);
+        .filter((question) => question.topicId === topicId)
+        .slice(startIdx, startIdx + limit);
 
 export async function __createQuestion(q) {
     const data = await readData();

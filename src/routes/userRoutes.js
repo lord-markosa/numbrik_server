@@ -1,6 +1,7 @@
 import express from "express";
 import registerUserHandler from "../controllers/userController/registerUserHandler.js";
 import loginUserHandler from "../controllers/userController/loginUserHandler.js";
+import passwordChangeHandler from "../controllers/userController/passwordChangeHandler.js";
 import getUserHandler from "../controllers/userController/getUserHandler.js";
 import verifyToken from "../middleware/authHandler.js";
 // import generateToken from "../utils/generateToken.js";
@@ -13,8 +14,8 @@ router.post("/register", registerUserHandler);
 // User login
 router.post("/login", loginUserHandler);
 
-// Fetch user data from token
-router.get("/data", verifyToken, getUserHandler);
+// Password reset
+router.post("/resetPass", verifyToken, passwordChangeHandler);
 
 /* Web PubSub token negotiation
 const negotiate = async (req, userId) => {

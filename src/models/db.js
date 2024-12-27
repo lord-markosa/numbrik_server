@@ -11,6 +11,7 @@ export const initializeDb = () =>
             console.log("Initializing database");
             try {
                 _initializeDb();
+                resolve();
             } catch (error) {
                 console.error("Error initializing database", error);
                 reject(error);

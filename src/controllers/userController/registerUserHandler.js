@@ -22,7 +22,9 @@ const registerUserHandler = async (req, res) => {
             password: hashedPassword,
             phoneNumber,
             email,
-            topicwiseProgressInfo: {},
+            progressInfo: {},
+            diamonds: 0,
+            role: "user",
         });
 
         const userId = newUser.id;
@@ -35,6 +37,8 @@ const registerUserHandler = async (req, res) => {
             message: "User registered successfully",
             token,
             username: newUser.username,
+            progressInfo: newUser.progressInfo,
+            diamonds: newUser.diamonds,
         });
     } catch (error) {
         console.error(`Error registering user: ${error}`);

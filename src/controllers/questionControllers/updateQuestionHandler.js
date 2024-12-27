@@ -1,6 +1,7 @@
 import { getQuestionById, updateQuestion } from "../../models/questionDao.js";
 
 const updateQuestionHandler = async (req, res) => {
+    // [TODO] to be updated with the latest props
     const { tags, lod, problemStatement, options, hint, solution, answer } =
         req.body;
 

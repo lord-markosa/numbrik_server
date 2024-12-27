@@ -6,41 +6,954 @@
       "password": "$2a$10$GNpUrfZy5kg99BX1XOTGRuHLOs2sXVOr6K1h7SefT4.zASmTMhh3C",
       "phoneNumber": "9999999991",
       "email": "testuser@gamil.com",
-      "topicwiseProgressInfo": {}
+      "progressInfo": {
+        "MT110": {
+          "responses": {
+            "1733397392332-735733": [
+              0
+            ],
+            "1733397392332-735734": [
+              1
+            ],
+            "1733397392332-735735": [
+              2
+            ],
+            "1733397392332-735736": [
+              0
+            ],
+            "1733397392332-735737": [
+              1
+            ],
+            "1733397392332-735718": [
+              1
+            ],
+            "1733397392332-735719": [
+              1
+            ],
+            "1733397392332-735720": [
+              3
+            ],
+            "1733397392332-735721": [
+              0
+            ],
+            "1733397392332-735722": [
+              1
+            ],
+            "1733397392332-735723": [
+              0
+            ],
+            "1733397392332-735724": [
+              0
+            ],
+            "1733397392332-735725": [
+              3
+            ],
+            "1733397392332-735726": [
+              1
+            ],
+            "1733397392332-735727": [
+              1
+            ],
+            "1733397392332-735728": [
+              1
+            ],
+            "1733397392332-735729": [
+              1
+            ],
+            "1733397392332-735730": [
+              0
+            ],
+            "1733397392332-735731": [
+              3
+            ]
+          },
+          "solvedCount": 19,
+          "correctCount": 8
+        }
+      },
+      "diamonds": 18,
+      "role": "user"
+    },
+    {
+      "id": "1734363524611-550139",
+      "username": "_Maria_",
+      "password": "$2a$10$1z9kwplUanvfiseBqNZOmOts0bCe/vfCgbR78Z2lcYspgdJ26juEu",
+      "progressInfo": {
+        "MT110": {
+          "responses": {
+            "1733397392332-735713": [
+              3
+            ],
+            "1733397392332-735714": [
+              3
+            ],
+            "1733397392332-735717": [
+              0
+            ],
+            "1733397392332-735718": [
+              1
+            ],
+            "1733397392332-735719": [
+              0
+            ],
+            "1733397392332-735720": [
+              3
+            ],
+            "1733397392332-735721": [
+              0
+            ],
+            "1733397392332-735722": [
+              1
+            ],
+            "1733397392332-735723": [
+              1
+            ],
+            "1733397392332-735724": [
+              0
+            ]
+          },
+          "solvedCount": 12,
+          "correctCount": 8
+        }
+      },
+      "diamonds": 8,
+      "role": "admin"
     }
   ],
   "questions": [
     {
+      "topicId": "MT110",
       "id": "1733397392332-735713",
       "tags": [
         "testing",
         "sample"
       ],
-      "lod": 0,
-      "problemStatement": "2 + 2 = ?",
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "Why is `sqrt(2)` an irrational number?",
       "options": [
-        {
-          "value": "3",
-          "isCorrect": false
-        },
-        {
-          "value": "4",
-          "isCorrect": true
-        },
-        {
-          "value": "5",
-          "isCorrect": false
-        },
-        {
-          "value": "6",
-          "isCorrect": false
-        }
+        "It is not a real number",
+        "It has a terminating decimal representation",
+        "It has a recurring decimal representation",
+        "`A = {(p, q) : p, q in Z, gcd(p, q) = 1, p^2 = 2q^2} quad` is an empty set"
       ],
-      "hint": "think hard",
-      "solution": "",
+      "correctOption": [
+        3
+      ],
+      "hint": "",
+      "solution": "Prove by contradiction. Assume it is a rational number",
       "answer": "",
       "createdAt": "2024-12-05T11:16:27.614Z",
       "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735714",
+      "tags": [
+        "prime",
+        "number theory"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "Which of the following is a prime number?",
+      "options": [
+        "22",
+        "39",
+        "57",
+        "97"
+      ],
+      "correctOption": [
+        3
+      ],
+      "hint": "Recall the definition of a prime number.",
+      "solution": "A prime number has exactly two distinct natural number divisors: 1 and itself. Thus, 97 is a prime number.",
+      "answer": "",
+      "createdAt": "2024-12-05T11:30:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735715",
+      "tags": [
+        "gcd",
+        "euclidean algorithm"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "What is the Greatest Common Divisor (GCD) of 60 and 48?",
+      "options": [
+        "6",
+        "12",
+        "24",
+        "8"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "Use the Euclidean algorithm to find the GCD.",
+      "solution": "By the Euclidean algorithm, GCD(60, 48) = GCD(48, 60 mod 48) = GCD(48, 12) = 12.",
+      "answer": "",
+      "createdAt": "2024-12-05T11:40:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735716",
+      "tags": [
+        "modular arithmetic",
+        "congruence"
+      ],
+      "type": "singleCorrect",
+      "lod": 3,
+      "problemStatement": "If `a ≡ b (mod n)`, which of the following is true?",
+      "options": [
+        "`n` divides `(a - b)`",
+        "`n` divides `(a + b)`",
+        "`a` and `b` are both even numbers",
+        "`a` and `b` are not divisible by `n`"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Understand the definition of congruence modulo `n`.",
+      "solution": "For any integers a, b, and n, with n > 0, we say that a is congruent to b modulo n, and write `a ≡ b (mod n)`, if n divides `(a - b)`.",
+      "answer": "",
+      "createdAt": "2024-12-05T11:50:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735717",
+      "tags": [
+        "prime factorization",
+        "unique factorization theorem"
+      ],
+      "type": "singleCorrect",
+      "lod": 3,
+      "problemStatement": "What is the prime factorization of 72?",
+      "options": [
+        "2^3 * 3^2",
+        "2^2 * 3^3",
+        "2^4 * 3^2",
+        "2^3 * 3^3"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Use the unique factorization theorem to find the prime factorization.",
+      "solution": "Prime factorization of 72 is 2^3 * 3^2.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:00:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735718",
+      "tags": [
+        "multiplicative inverse",
+        "modular arithmetic"
+      ],
+      "type": "singleCorrect",
+      "lod": 4,
+      "problemStatement": "What is the multiplicative inverse of 3 modulo 11?",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "8"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "Find a number `x` such that `(3 * x) mod 11 = 1`.",
+      "solution": "The multiplicative inverse of `a` modulo `m` is the number `x` such that `(a * x) mod m = 1`. For 3 modulo 11, `3 * 4 = 12`, `3 * 5 = 15`, `3 * 7 = 21`, `3 * 8 = 24`. Only `21 mod 11` equals `1`.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:00:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735719",
+      "tags": [
+        "factorization",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "What is the prime factorization of 60?",
+      "options": [
+        "`2^2 * 3 * 5`",
+        "`2 * 3^2 * 5`",
+        "`2^2 * 3^2`",
+        "`2 * 3 * 5`"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Divide 60 by its smallest prime factor and continue the process with the quotient.",
+      "solution": "The prime factorization of 60 is `2^2 * 3 * 5`, as `60 = 2 * 30 = 2 * 2 * 15 = 2^2 * 3 * 5`.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:05:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735720",
+      "tags": [
+        "perfect squares",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "Which of the following is not a perfect square?",
+      "options": [
+        "64",
+        "81",
+        "100",
+        "45"
+      ],
+      "correctOption": [
+        3
+      ],
+      "hint": "A perfect square is an integer that is the square of an integer.",
+      "solution": "Among the options given, 64, 81, and 100 are perfect squares as they are `8^2`, `9^2`, and `10^2` respectively. However, 45 is not a perfect square.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:10:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735721",
+      "tags": [
+        "diophantine equations",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 4,
+      "problemStatement": "Which of the following is a solution to the Diophantine equation `3x + 7y = 1`?",
+      "options": [
+        "`x = 5, y = -2`",
+        "`x = 3, y = 0`",
+        "`x = -2, y = 1`",
+        "`x = -3, y = 2`"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Try substituting the values of `x` and `y` into the equation.",
+      "solution": "Substituting the values from each pair into the equation `3x + 7y = 1`, the only pair that satisfies the equation is `x = 5, y = -2` as `3(5) + 7(-2) = 15 - 14 = 1`.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:15:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735722",
+      "tags": [
+        "divisibility rules",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "Which of the following numbers is divisible by 9?",
+      "options": [
+        "123456",
+        "987654",
+        "111111",
+        "222222"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "For a number to be divisible by 9, the sum of its digits must be a multiple of 9.",
+      "solution": "Adding the digits of each number, the sum for `987654` is `9+8+7+6+5+4=39`, which is divisible by 9.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:20:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735723",
+      "tags": [
+        "Euler's totient function",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 3,
+      "problemStatement": "What is the value of Euler's totient function φ(10)?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "10"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "Euler's totient function φ(n) counts the positive integers up to a given integer n that are relatively prime to n.",
+      "solution": "The positive integers less than 10 that are relatively prime to 10 are {1, 3, 7, 9}, which gives us φ(10) = 4.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:25:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735724",
+      "tags": [
+        "Chinese remainder theorem",
+        "system of congruences"
+      ],
+      "type": "singleCorrect",
+      "lod": 4,
+      "problemStatement": "What is the smallest positive integer that leaves a remainder of 2 when divided by 3, and a remainder of 3 when divided by 5?",
+      "options": [
+        "8",
+        "18",
+        "23",
+        "33"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "Apply the Chinese remainder theorem to solve the system of congruences.",
+      "solution": "The system of congruences is x ≡ 2 (mod 3) and x ≡ 3 (mod 5). The smallest positive integer that satisfies both conditions is 23.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:30:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735725",
+      "tags": [
+        "perfect numbers",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "Which of the following is a perfect number?",
+      "options": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "A perfect number is a positive integer that is equal to the sum of its proper divisors, excluding the number itself.",
+      "solution": "The proper divisors of 6 are 1, 2, and 3, and their sum is 6, which makes it a perfect number.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:35:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735726",
+      "tags": [
+        "carmichael numbers",
+        "composite numbers"
+      ],
+      "type": "singleCorrect",
+      "lod": 5,
+      "problemStatement": "Which of the following numbers is a Carmichael number?",
+      "options": [
+        "561",
+        "1105",
+        "1729",
+        "All of the above"
+      ],
+      "correctOption": [
+        3
+      ],
+      "hint": "Carmichael numbers are composite numbers that satisfy the modular arithmetic condition of Fermat's little theorem, which is typically true for prime numbers only.",
+      "solution": "561, 1105, and 1729 are all Carmichael numbers because they are composite numbers that pass Fermat's little theorem for all integer bases a such that 1 < a < n where gcd(a,n)=1.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:40:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735727",
+      "tags": [
+        "pigeonhole principle",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "If 6 socks are randomly pulled from a drawer containing just black and white socks, what is the minimum number of socks that must be black?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "None of the above"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "Using the pigeonhole principle, think about the minimum number that guarantees at least one color is the majority.",
+      "solution": "By the pigeonhole principle, to ensure that at least one color is the majority when 6 socks are drawn, there must be at least 3 of one color.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:45:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735728",
+      "tags": [
+        "sum of integers",
+        "sequence"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "What is the sum of the first 10 positive integers?",
+      "options": [
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "The sum of an arithmetic series is given by `n/2 * (first term + last term)`.",
+      "solution": "The sum of the first 10 positive integers is given by 10/2 * (1 + 10) = 5 * 11 = 55.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:50:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735729",
+      "tags": [
+        "prime factorization",
+        "lcm"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "What is the least common multiple (LCM) of 12 and 18?",
+      "options": [
+        "36",
+        "72",
+        "144",
+        "216"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Find the prime factorization of each number and use the highest powers of all primes that appear.",
+      "solution": "The prime factorization of 12 is `2^2 * 3` and for 18 it's `2 * 3^2`. The LCM is `2^2 * 3^2 = 36`.",
+      "answer": "",
+      "createdAt": "2024-12-05T12:55:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735730",
+      "tags": [
+        "prime numbers",
+        "proof"
+      ],
+      "type": "singleCorrect",
+      "lod": 3,
+      "problemStatement": "Which of the following statements is true about prime numbers?",
+      "options": [
+        "There are infinitely many primes.",
+        "All primes are odd numbers.",
+        "The sum of any two primes is also prime.",
+        "If a number is prime, doubling it gives another prime."
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Review the fundamental theorem of arithmetic.",
+      "solution": "The statement 'There are infinitely many primes' is true and has been proven by the classic proof by contradiction by Euclid.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:00:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735731",
+      "tags": [
+        "number theory",
+        "integers"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "Which of the following integers is an example of a palindrome?",
+      "options": [
+        "12321",
+        "11211",
+        "12345",
+        "12212"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "A palindrome reads the same forwards and backwards.",
+      "solution": "The integer 12321 is a palindrome because it reads the same forwards and backwards.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:05:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735732",
+      "tags": [
+        "number theory",
+        "divisibility"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "If a number is divisible by 4 and 6, it must also be divisible by which of the following numbers?",
+      "options": [
+        "2",
+        "3",
+        "12",
+        "All of the above"
+      ],
+      "correctOption": [
+        3
+      ],
+      "hint": "Consider the prime factorization of 4 and 6.",
+      "solution": "A number divisible by 4 (which is `2^2`) and 6 (which is `2 * 3`) will have at least the prime factors `2^2` and `3` in its prime factorization, making it divisible by 2, 3, and 12 (which is `2^2 * 3`). Therefore, it is divisible by all of the above.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:10:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735733",
+      "tags": [
+        "number theory",
+        "divisibility"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "Which of the following numbers is divisible by both 5 and 10?",
+      "options": [
+        "200",
+        "305",
+        "510",
+        "1235"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "For a number to be divisible by 5 and 10, it should end with a 0.",
+      "solution": "200 ends with a 0 and is divisible by both 5 and 10.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:15:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735734",
+      "tags": [
+        "number theory",
+        "prime numbers"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "What is the next prime number after 7?",
+      "options": [
+        "9",
+        "11",
+        "13",
+        "14"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "Recall the sequence of prime numbers or use divisibility rules to eliminate non-prime options.",
+      "solution": "After 7, the next number in the sequence of prime numbers is 11, as it is only divisible by 1 and itself.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:20:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735735",
+      "tags": [
+        "number theory",
+        "arithmetic functions"
+      ],
+      "type": "singleCorrect",
+      "lod": 3,
+      "problemStatement": "How many positive divisors does the number 28 have?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "Factorize the number 28 and use the divisor function.",
+      "solution": "28 can be factorized as 2^2 * 7. The number of positive divisors is given by (2+1)*(1+1) = 6.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:25:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735736",
+      "tags": [
+        "number theory",
+        "modular arithmetic"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "What is the remainder when 2^8 is divided by 3?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "Calculate 2^8 and then find the remainder when this number is divided by 3.",
+      "solution": "2^8 = 256 and 256 divided by 3 gives a remainder of 1.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:30:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735737",
+      "tags": [
+        "number theory",
+        "factors"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "What is the largest prime factor of 50?",
+      "options": [
+        "2",
+        "5",
+        "25",
+        "None of the above"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "Find the prime factorization of 50.",
+      "solution": "The prime factorization of 50 is 2 * 5^2. The largest prime factor is 5.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:35:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735738",
+      "tags": [
+        "number theory",
+        "divisibility"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "Which of the following numbers is divisible by 3?",
+      "options": [
+        "12345",
+        "23456",
+        "34567",
+        "45678"
+      ],
+      "correctOption": [
+        0
+      ],
+      "hint": "The sum of the digits of a number divisible by 3 is also divisible by 3.",
+      "solution": "The sum of the digits of 12345 is 1+2+3+4+5 = 15, which is divisible by 3.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:40:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735739",
+      "tags": [
+        "number theory",
+        "divisibility"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "Which of the following numbers is divisible by 8?",
+      "options": [
+        "1234",
+        "2345",
+        "3456",
+        "4567"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "A number is divisible by 8 if the last three digits form a number divisible by 8.",
+      "solution": "The last three digits of 3456 form the number 456, which is divisible by 8.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:45:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735740",
+      "tags": [
+        "number theory",
+        "divisibility"
+      ],
+      "type": "singleCorrect",
+      "lod": 2,
+      "problemStatement": "Which of the following numbers is divisible by 9?",
+      "options": [
+        "123456",
+        "987654",
+        "111111",
+        "222222"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "For a number to be divisible by 9, the sum of its digits must be a multiple of 9.",
+      "solution": "Adding the digits of each number, the sum for 987654 is 9+8+7+6+5+4 = 39, which is divisible by 9.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:50:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT110",
+      "id": "1733397392332-735741",
+      "tags": [
+        "number theory",
+        "divisibility"
+      ],
+      "type": "singleCorrect",
+      "lod": 1,
+      "problemStatement": "Which of the following numbers is divisible by 7?",
+      "options": [
+        "123456",
+        "987654",
+        "111111",
+        "222222"
+      ],
+      "correctOption": [
+        1
+      ],
+      "hint": "For a number to be divisible by 7, the alternating sum of its digits must be a multiple of 7.",
+      "solution": "The alternating sum of the digits of 987654 is 9-8+7-6+5-4 = 3, which is divisible by 7.",
+      "answer": "",
+      "createdAt": "2024-12-05T13:55:00.000Z",
+      "createdBy": "1733395379228-116522"
+    },
+    {
+      "topicId": "MT101",
+      "id": "1734805715156-95125",
+      "tags": [
+        "linear equation"
+      ],
+      "lod": 1,
+      "problemStatement": "How many variables are there in `ax+by+c=0`?",
+      "correctOption": [
+        3
+      ],
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "hint": "",
+      "solution": "When no information is available about a, b, c they are considered as variables.",
+      "answer": "",
+      "createdAt": "2024-12-21T18:28:35.152Z",
+      "createdBy": "1734363524611-550139"
+    },
+    {
+      "id": "1734950057913-401016",
+      "topicId": "MT110",
+      "tags": [],
+      "lod": 1,
+      "problemStatement": "What is the first 3 digit prime number",
+      "options": [
+        "103",
+        "107",
+        "101",
+        "097"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "",
+      "solution": "",
+      "answer": "",
+      "createdAt": "2024-12-23T10:34:17.910Z",
+      "createdBy": "1734363524611-550139"
+    },
+    {
+      "id": "1734950285383-943866",
+      "topicId": "MT101",
+      "tags": [
+        "olympiad"
+      ],
+      "lod": 1,
+      "problemStatement": "`2^a + 2^b + 2^c = 148` Then which of the following is false?",
+      "options": [
+        "`a=7`",
+        "`a=4`",
+        "`a=3`",
+        "`a=2`"
+      ],
+      "correctOption": [
+        2
+      ],
+      "hint": "",
+      "solution": "",
+      "answer": "",
+      "createdAt": "2024-12-23T10:38:05.381Z",
+      "createdBy": "1734363524611-550139"
+    },
+    {
+      "id": "1734952019206-194059",
+      "topicId": "MT110",
+      "tags": [],
+      "lod": 1,
+      "problemStatement": "Find a natural number N such that `N^2 - 10N - 22`  equals the product of digits of N",
+      "options": [
+        "91",
+        "28",
+        "89",
+        "12"
+      ],
+      "correctOption": [
+        3
+      ],
+      "hint": "",
+      "solution": "This could be only possible with a 2 digits number. Assume it to be `d_0 and d_1`. Substitute it back and solve.",
+      "answer": "",
+      "createdAt": "2024-12-23T11:06:59.203Z",
+      "createdBy": "1734363524611-550139"
+    },
+    {
+      "id": "1734953881838-749687",
+      "topicId": "MT101",
+      "tags": [],
+      "lod": 1,
+      "problemStatement": "Which of the following is not a polynomial",
+      "options": [
+        "`ax^2+bx+c`",
+        "`ax+b`",
+        "0",
+        "`sqrt(x)`"
+      ],
+      "correctOption": [
+        3
+      ],
+      "hint": "",
+      "solution": "Polynomial cannot have a degree of 0.5",
+      "answer": "",
+      "createdAt": "2024-12-23T11:38:01.835Z",
+      "createdBy": "1734363524611-550139"
     }
   ]
 }

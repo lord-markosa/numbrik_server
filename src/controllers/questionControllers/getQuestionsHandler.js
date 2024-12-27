@@ -1,19 +1,39 @@
-import { QUESTIONS_LIMIT_PER_REQUEST } from "../../constants.js";
+import {
+    ADMINS_LIMIT_PER_REQUEST,
+    QUESTIONS_LIMIT_PER_REQUEST,
+} from "../../constants/constants.js";
 import { getQuestions } from "../../models/questionDao.js";
-import { updateUser } from "../../models/userDao.js";
 
 const getQuestionsHandler = async (req, res) => {
-    const { topic } = req.query;
-    const user = req.user;
-    const currentCount = user.topicwiseProgressInfo[topic];
-    try {
-        const questions = await getQuestions(topic, currentCount);
-        user.topicwiseProgressInfo[topic] += QUESTIONS_LIMIT_PER_REQUEST;
-        await updateUser(user);
+    const { topicId } = req.params;
+    const startIndex = req.query.startIndex ?? 0;
 
+    const user = req.user;
+    const isAdminCall = req.isAdminCall;
+
+    // Initialize or retrieve the progressInfo for the given topicId
+    const progressInfo = user.progressInfo[topicId] || {
+        responses: {},
+        solvedCount: 0,
+        correctCount: 0,
+    };
+
+    try {
+        // Fetch questions from the database based on the topicId and user's progress
+        const questions = await getQuestions(
+            topicId,
+            isAdminCall ? startIndex : progressInfo.solvedCount,
+            isAdminCall ? ADMINS_LIMIT_PER_REQUEST : QUESTIONS_LIMIT_PER_REQUEST
+        );
+
+        if (questions.length === 0) {
+            return res.status(404).json({ message: "No questions found" });
+        }
+
+        // Return the questions in the response
         res.status(200).json(questions);
     } catch (error) {
-        res.status(500).json({ message: "Error fetching Question", error });
+        res.status(500).json({ message: "Error fetching questions", error });
     }
 };
 

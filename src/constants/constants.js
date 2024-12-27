@@ -1,0 +1,2 @@
+export const QUESTIONS_LIMIT_PER_REQUEST = 5;
+export const ADMINS_LIMIT_PER_REQUEST = 15;

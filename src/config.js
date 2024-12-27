@@ -2,10 +2,10 @@ const config = {};
 
 config.dbHost = process.env.DB_HOST;
 config.dbAuthKey = process.env.DB_AUTH_KEY;
-config.databaseId = "Sharevana";
+
+config.databaseId = "Numbrik";
 config.userContainer = "Users";
-config.storyContainer = "Story";
-config.chatContainer = "Chats";
+config.questionContainer = "Questions";
 
 config.nodeEnv = process.env.NODE_ENV || "development";
 config.jwtSecret = process.env.JWT_SECRET || "thereIsNoSecret";

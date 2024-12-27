@@ -1,4 +1,3 @@
-import { QUESTIONS_LIMIT_PER_REQUEST } from "../../constants.js";
 import { getQuestionItemById, getQuestionItems } from "./_db.js";
 
 export async function _getAllQuestion() {
@@ -6,13 +5,13 @@ export async function _getAllQuestion() {
     return resources;
 }
 
-export async function _getQuestions(topic, currentCount) {
+export async function _getQuestions(topicId, startIdx, limit) {
     const querySpec = {
-        query: "SELECT * FROM c WHERE c.topic = @topic OFFSET @currentCount LIMIT @limit",
+        query: "SELECT * FROM c WHERE c.topicId = @topicId OFFSET @startIdx LIMIT @limit",
         parameters: [
-            { name: "@topic", value: topic },
-            { name: "@currentCount", value: currentCount },
-            { name: "@limit", value: QUESTIONS_LIMIT_PER_REQUEST },
+            { name: "@topicId", value: topicId },
+            { name: "@startIdx", value: startIdx },
+            { name: "@limit", value: limit },
         ],
     };
 
