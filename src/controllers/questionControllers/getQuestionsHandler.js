@@ -22,7 +22,7 @@ const getQuestionsHandler = async (req, res) => {
         // Fetch questions from the database based on the topicId and user's progress
         const questions = await getQuestions(
             topicId,
-            isAdminCall ? startIndex : progressInfo.solvedCount,
+            isAdminCall ? parseInt(startIndex, 0) : progressInfo.solvedCount,
             isAdminCall ? ADMINS_LIMIT_PER_REQUEST : QUESTIONS_LIMIT_PER_REQUEST
         );
 
