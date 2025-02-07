@@ -20,8 +20,12 @@ export async function _getQuestions(topicId, startIdx, limit) {
 }
 
 export async function _createQuestion(q) {
-    const { resource } = await getQuestionItems().create(q);
-    return resource;
+    // Perform bulk operation
+    const bulkResponse = await getQuestionItems().bulk(
+        q.map((item) => ({ operationType: "Create", resourceBody: item }))
+    );
+
+    return bulkResponse.map((res) => res.resourceBody);
 }
 
 export async function _getQuestionById(qId) {

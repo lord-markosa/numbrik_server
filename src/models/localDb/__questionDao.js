@@ -13,9 +13,15 @@ export const __getQuestions = async (topicId, startIdx, limit) =>
 
 export async function __createQuestion(q) {
     const data = await readData();
-    data.questions.push({ id: generateUniqueId(), ...q });
+
+    const inputQuestions = q.map((question) => ({
+        id: generateUniqueId(),
+        ...question,
+    }));
+
+    data.questions.push(...inputQuestions);
     await writeData(data);
-    return data.questions[data.questions.length - 1];
+    return inputQuestions;
 }
 
 export async function __updateQuestion(q) {

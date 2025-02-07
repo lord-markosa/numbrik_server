@@ -13,5 +13,6 @@ config.port = process.env.PORT || "3001";
 config.azurePsConnStr = process.env.AZURE_PS_CONN_STR;
 config.azurePsHub = process.env.AZURE_PS_HUB;
 config.adminKey = process.env.ADMIN_KEY;
+config.aiApiKey = process.env.AI_API_KEY;
 
 export default config;
