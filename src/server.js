@@ -30,7 +30,6 @@ app.set("serviceClient", serviceClient);
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log(__dirname);
 app.use(express.static(__dirname + "/../public"));
 
 app.use("/test/", testRoutes);

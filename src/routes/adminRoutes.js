@@ -4,6 +4,7 @@ import setRequestedUser from "../controllers/adminControllers/setRequestedUser.j
 import getUserHandler from "../controllers/userController/getUserHandler.js";
 import getQuestionsHandler from "../controllers/questionControllers/getQuestionsHandler.js";
 import createQuestionHandler from "../controllers/questionControllers/createQuestionHandler.js";
+import getGeneratedQuestions from "../controllers/aiControllers/getGeneratedQuestions.js";
 
 const router = express.Router();
 
@@ -18,6 +19,9 @@ router.post("/get-user", setRequestedUser, getUserHandler);
 
 // Add a new question
 router.post("/create-question", createQuestionHandler);
+
+// Generate questions using AI
+router.post("/generate-questions", getGeneratedQuestions);
 
 const adminRoutes = router;
 export default adminRoutes;

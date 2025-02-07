@@ -1,36 +1,26 @@
 import { createQuestion } from "../../models/questionDao.js";
 
 const createQuestionHandler = async (req, res) => {
-    const {
-        topicId,
-        tags,
-        type,
-        lod,
-        problemStatement,
-        options,
-        correctOption,
-        hint,
-        solution,
-        answer,
-    } = req.body;
+    const { questions } = req.body;
 
     try {
-        res.status(201).json(
-            await createQuestion({
-                topicId: topicId ?? "Miscellaneous",
-                tags,
-                lod,
-                problemStatement,
-                options,
-                hint,
-                solution,
-                answer,
-                correctOption,
-                type,
+        const final = await createQuestion(
+            questions.map((q) => ({
+                topicId: q.topicId ?? "Miscellaneous",
+                tags: q.tags ?? [],
+                lod: q.lod ?? 1,
+                problemStatement: q.problemStatement,
+                options: q.options,
+                hint: q.hint,
+                solution: q.solution,
+                answer: q.answer,
+                correctOption: q.correctOption,
+                type: q.type ?? "singleCorrect",
                 createdAt: new Date(),
                 createdBy: req.user.id,
-            })
+            }))
         );
+        res.status(201).json(final);
     } catch (error) {
         res.status(500).json({ message: "Error creating question", error });
     }
